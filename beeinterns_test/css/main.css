@@ -1,53 +1,52 @@
 body{
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    font-family: Jost;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    user-select: none;
-    color: #FFFFFF;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  user-select: none;
+  color: #FFFFFF;
 }
 
 ::selection {
-    background-color: rgb(111, 110, 255);
+  background-color: rgb(111, 110, 255);
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
-    color: rgb(161, 161, 161);
-    transition: all 0.1s ease;
-    text-decoration: none;
-    opacity:1;
+  color: rgb(161, 161, 161);
+  transition: all 0.1s ease;
+  text-decoration: none;
+  opacity:1;
 }
 a:hover {
-    color: white;
-    transition: all 0.1s ease;
+  color: white;
+  transition: all 0.1s ease;
 }
 
 a:active {
-    color: white;
+  color: white;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-
-
 .wrapper {
-    display: grid;
-    grid-template-areas:
-      " sidebar body ";
-    grid-template-columns: 280px 1fr;
-    height: 100vh;
-    width: 100vw;
-    
-  }
+  display: grid;
+  grid-template-areas:
+    " sidebar body ";
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+  width: 100vw;
+}
 
 .body {
   grid-area: body;
-  
   display:grid;
   grid-template-rows: 75px 1fr;
   grid-template-areas: 
@@ -71,14 +70,14 @@ img {
 }
 
 header {
-    grid-area: header;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    line-height: 30px;
-    padding: 1rem 1rem 1rem 60px;
-    border-bottom: 1px solid rgba(216, 215, 215, 0.1);
-  }
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  line-height: 30px;
+  padding: 1rem 1rem 1rem 60px;
+  border-bottom: 1px solid rgba(216, 215, 215, 0.1);
+}
 
 .header-menu {
   margin-top: 0.5rem;
@@ -104,21 +103,21 @@ header {
   }
 
 .acc-info-work{
-    padding:0;
-    color: rgba(255,255,255);
-    margin:0;
-    width:350px
+  padding:0;
+  color: rgba(255,255,255);
+  margin:0;
+  width:350px
 }
 
 .acc-info-work li {
   display: inline;
   margin-right: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top:3px;
-    border-radius: 5px;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.1)
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top:3px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1)
 }
 #hours {
   padding-left: 3px;
@@ -180,8 +179,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-    background-color: rgb(48, 50, 65);
-    border-bottom: 1px solid rgba(216, 215, 215, 0.1);
+  background-color: rgb(48, 50, 65);
+  border-bottom: 1px solid rgba(216, 215, 215, 0.1);
 }
 .logo-beeline {
   position: absolute;
@@ -219,12 +218,12 @@ header {
   margin-bottom: 6%;
 }
 nav{
-    margin-top: 1.5rem;
-    border-bottom: 1px solid rgba(216, 215, 215, 0.1);
+  margin-top: 1.5rem;
+  border-bottom: 1px solid rgba(216, 215, 215, 0.1);
 }
 .sidebar-footer input{
   position:absolute; left:-9999px;
-  }
+}
   
 .sliderce {
   position: relative; 
@@ -262,83 +261,74 @@ nav{
   left: 1.5em;
   box-shadow: 0 0 0 0 rgb(141, 141, 141) inset;
 }
-  ::-webkit-scrollbar {
-    display: none;
+.content {
+  overflow-y: scroll;
+  grid-area: content;
 }
-  .content {
-    overflow-y: scroll;
-    grid-area: content;
-    
-}
-  main {
-    position: sticky;
-    padding: 45px 0 0 60px;
-    height:100%;
-    width:90%;
-    display:grid;
-    grid-template-rows: 1fr 5.5fr 1fr 5.5fr;
-    grid-template-areas:
-      "title1"
-      "lecture-container1"
-      "title2"
-      "lecture-container2";
+main {
+  position: sticky;
+  padding: 45px 0 0 60px;
+  height:100%;
+  width:90%;
+  display:grid;
+  grid-template-rows: 1fr 5.5fr 1fr 5.5fr;
+  grid-template-areas:
+    "title1"
+    "lecture-container1"
+    "title2"
+    "lecture-container2";
   }
-  .title1 {
-    font-size:11px;
-    /* top: 0; */
-    font-weight: normal;
-    grid-area: title1;
+.title1 {
+  font-size:11px;
+  font-weight: normal;
+  grid-area: title1;
   }
-  .title1 > p {
-    font-size:21px;
-    margin-top:3px;
-    width:100%;
+.title1 > p {
+  font-size:21px;
+  margin-top:3px;
+  width:100%;
   }
   
-
-  .title2 {
-    font-size:11px;
-    /* top: 0; */
-    font-weight: normal;
-    grid-area: title2;
+.title2 {
+  font-size:11px;
+  font-weight: normal;
+  grid-area: title2;
   }
-  .title2 > p {
-    font-size:21px;
-    margin-top:3px;
-    width:100%;
+.title2 > p {
+  font-size:21px;
+  margin-top:3px;
+  width:100%;
     
   }
-  p > .slide-footer-button{
+p > .slide-footer-button {
   position: relative;
   display:inline-block;
   margin-left:52%;
   }
 
-  .next-slide:hover {
-    background: rgba(255,255,255,0.05);
+.next-slide:hover {
+  background: rgba(255,255,255,0.05);
   }
-  .next-slide{
-    position: relative;
-    /* display:inline-block; */
-    margin-left:12px;
-    height: 37px;
-    width: 37px;
-    color: white;
-    font-size:30px;
-    margin-right:8px;
-    padding-bottom: 3px;
-    border-radius: 6px;
-    background: transparent;
-    transition: all 0.2s;
-    border: 1px solid rgba(255,255,255,0.2);
-    cursor: pointer;
-    top:6px;
-  }
-  p>#next-slide-right{
-    position: relative;
-    /* display:inline-block; */
-    margin-left:0%;
-  }
+.next-slide {
+  position: relative;
+  margin-left:12px;
+  height: 37px;
+  width: 37px;
+  color: white;
+  font-size:30px;
+  margin-right:8px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  background: transparent;
+  transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  top:6px;
+}
+p>#next-slide-right {
+  position: relative;
+  margin-left:0%;
+}
 
 .lecture-container1 {
   grid-area: lecture-container1;
@@ -411,39 +401,34 @@ nav{
   background: rgb(104, 104, 192);
 
 }
-
 .submenu{
-    color: rgb(179, 179, 179);
-    cursor: pointer;
-    padding: 14px;
-    width: 100%;
-    text-align: left;
-    text-indent: 19.56%;
-    line-height: 10px;
-    border: none;
-    outline: none;
-    user-select: none;
-    transition: background 0.1s ease-in;
-    background: transparent;
+  color: rgb(179, 179, 179);
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  text-align: left;
+  text-indent: 19.56%;
+  line-height: 10px;
+  border: none;
+  outline: none;
+  user-select: none;
+  transition: max-height 0.1s ease-in;
+  background: transparent;
   }
-
 .menu{
   color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 10px;
   text-align: left;
   text-indent: 6%;
-  transition:  0.5s ease;
   display: block;
   line-height: 18px;
-  user-select: none;
   }
-
 .submenu:hover {
-    background-color: rgba(255, 255, 255, 0.03);
-    color: rgb(255, 255, 255);
-    border-left: 4px solid rgb(111, 110, 255);
-    transition: all 0.1s ease;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: rgb(255, 255, 255);
+  border-left: 4px solid rgb(111, 110, 255);
+  transition: all 0.1s ease;
   }
 .submenu > i {
   text-align: left;
@@ -455,42 +440,40 @@ nav{
   transition: all 0.1s ease;
 } 
   
-
 input {
-    display: none;
+  display: none;
 }
-
 nav label{
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    padding: 10px;
-    text-align: left;
-    text-indent: 6%;
-    transition:  0.1s ease;
-    display: block;
-    line-height: 18px;
-    user-select: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  text-indent: 6%;
+  transition:  0.1s ease;
+  display: block;
+  line-height: 18px;
+  user-select: none;
   }
  nav label::after {
 	font-family: "Font Awesome 5 Free";
 	content: '\f107';
 	font-weight: bold;
 	font-size: 22px;
-	position: absolute;
-	right: 8%;
+  margin-right: 15px;
+  float: right;
 }
 
 nav input:checked + label::after {
 	content: '\f106';
-    font-weight: bold;
+  font-weight: bold;
 }
 
  input + label + .panel2 {
-    display: none;
+  display: none;
 }
 
  input:checked + label + .panel2 {
-    display: block;
+  display: block;
 }
 
  nav input {
@@ -505,9 +488,16 @@ input:checked + label + #dropdown {
 }
 
 .panel2 {
-    max-height: 30rem;
-    overflow: hidden;
-    transition: max-height 0.1s;
+  max-height: 30rem;
+  overflow: hidden;
+  /* transition: max-height 0.1s; */
+}
+
+.mobile-menu {
+  position: relative;
+  display: inline-block;
+  display:none;
+  transition:max-height 0.5s ease-out;
 }
 .mobile-menu-button{
   height: 50px;
@@ -515,7 +505,7 @@ input:checked + label + #dropdown {
   margin: 0px 0px 0px 0px;
   padding: 4px 10px 0px 10px;
   text-align: center;
-  color: rgb(155, 155, 155);
+  color: rgba(255,255,255,0.2);
   font-size:50px;
   background: transparent;
   transition: all 0.2s;
@@ -535,15 +525,29 @@ input:checked + label + #dropdown {
   font-size:14px;
   color: rgba(255,255,255);
 }
-
-
-.mobile-menu {
-  position: relative;
-  display: inline-block;
-  display:none;
+.mobile-menu-content .sliderce {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height:20px;
+  text-indent: -142px;
 }
-
-
+.mobile-menu-content input:checked + .sliderce::after {
+  width: 1.4em; 
+  height: 1.4em;
+  left: 1.5em;
+  box-shadow: 0 0 0 0 rgb(141, 141, 141) inset;
+}
+.panel2 > p{
+  margin: 10px 0px 5px 22px; 
+  line-height:20px;
+}
+ .panel2 > hr{
+  margin: 15px 0px 0px 0px;
+  line-height:20px;
+  size:1px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: none;
+}
 
 
 @media only screen and (max-width: 1200px) and (min-width: 851px) {
@@ -589,26 +593,34 @@ input:checked + label + #dropdown {
   }
   .title2 {
     margin:0 auto;
+    padding-top:20px;
+    text-align: center;
   }
  .acc-info-work {
-   display: none;
- }
+    display: none;
+  }
+  #userimg{
+    margin-left:0px;
+    right:140px;
+  }
+  .user-status{
+    margin-left:0px;
+    right:0%;
+    width:130px;
+  }
+  .mobile-menu{
+    display:block;
+  }
+  .mobile-menu-content{
+    display:block;
+    min-height: 70vh;
+  }
+  .panel2{
 
-#userimg{
-  margin-left:0px;
-  right:140px;
-}
-.user-status{
-  margin-left:0px;
-  right:0%;
-  width:130px;
-}
-.mobile-menu{
-  display:block;
-}
-
-
-
+    max-height: 70vh;
+    max-width: 240px;
+    overflow-y: scroll;
+  }
 }
 
 
